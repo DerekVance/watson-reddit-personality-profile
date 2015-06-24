@@ -31,7 +31,7 @@ var watsonOutput = function (personParse, reddit_comments) {
     var watson_xhr = xhr.response;
     var personalityAssesment = JSON.parse(watson_xhr);
     var data = (personParse(personalityAssesment));
-    console.log(data);
+    
   });
   xhr.send(reddit_comments);
 };
