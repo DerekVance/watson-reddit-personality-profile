@@ -2,21 +2,30 @@
 <html lang="en"><head>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="/css/app.css">
 	<title>Watson Demo</title>
 </head>
 
 <body>
-	<div>
+	<div class="grid">
 		<h1>Reddit User Personality Profile</h1>
-		<form>
+		<form class="input">
 			<label>Enter Username:
 				<input type="text" name="username">
 			</label>
 			<button type="submit">Run Profile</button>
 		</form>
+	</div>
+	<div id="chart-svg"><svg></svg></div>
 
 
+<script src="/bower_components/sonic/src/sonic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+<script src="https://cdn.rawgit.com/novus/nvd3/v1.7.1/build/nv.d3.min.js"></script>
+<script src="/js/sonic.js"></script>
 <script src="/js/logic.js"></script>
 <script src="/js/app.js"></script>
+
+
 </body>
 </html>

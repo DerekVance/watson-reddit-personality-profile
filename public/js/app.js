@@ -26,12 +26,36 @@ var redditInput = function (reddit_name) {
 var watsonOutput = function (personParse, reddit_comments) {
   var xhr = new XMLHttpRequest;
   xhr.open('post', 'http://jbrenneman-watson-demo.mybluemix.net/index');
-
   xhr.addEventListener('load', function() {
     var watson_xhr = xhr.response;
     var personalityAssesment = JSON.parse(watson_xhr);
     var data = (personParse(personalityAssesment));
+<<<<<<< HEAD
     
+=======
+    console.log(data);
+    //NVD3 and d3 chart code
+    nv.addGraph(function() {
+      var chart = nv.models.pieChart()
+          .x(function(d) { return d.label })
+          .y(function(d) { return Math.round(d.value * 100) })
+          .showLabels(false)
+          .showLegend(false)
+          .color(['#B5B5B5', '#92DCE0', '#0092D7', '#3EC303', '#EE8D09', '#EDE527']);
+
+
+        d3.select("#chart-svg svg")
+            .datum(data)
+            .call(chart);
+
+        document.body.removeChild(load.canvas);
+        // d3.select('load.canvas')
+
+      return chart;
+
+    });
+
+>>>>>>> 6f1d3bc3bf5a4b222ec946b31962f33741ab66b0
   });
   xhr.send(reddit_comments);
 };
@@ -41,7 +65,10 @@ var watsonOutput = function (personParse, reddit_comments) {
 // then do the reddit request
 // google analytics
 var button = document.querySelector('button');
+var grif = document.querySelector('.grid');
 button.addEventListener('click', function (e) {
+  load.play();
+  document.body.appendChild(load.canvas);
   userInput(redditInput);
   e.preventDefault();
 });

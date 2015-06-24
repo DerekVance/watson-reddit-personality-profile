@@ -1,0 +1,17 @@
+{
+  "name": "sonic.js",
+  "main": "src/sonic.js",
+  "description": "Sonic is a tiny class you can use to generate loading indicators",
+  "license": "Unlicense (Public Domain)",
+  "homepage": "https://github.com/padolsey/sonic.js",
+  "_release": "1459a30b19",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "1459a30b19cd73fa0953185e97b221af708ca7b5"
+  },
+  "_source": "git://github.com/padolsey/sonic.js.git",
+  "_target": "*",
+  "_originalSource": "sonic",
+  "_direct": true
+}
